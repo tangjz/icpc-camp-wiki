@@ -11,7 +11,7 @@ Solutions
 A. Mixing Colours
 -----------------
 
-upsolved by chitanda
+upsolved by chitanda, skywalkert
 
 ------------------------------------------------------------------------
 
@@ -35,12 +35,30 @@ skywalkert's solution
 C. Shopping Malls
 -----------------
 
-solved by braveTester, upsolved by none
+solved by braveTester, upsolved by skywalkert
+
+------------------------------------------------------------------------
+
+skywalkert's solution
+
+最短路签到题。
 
 D. Decoding the Hallway
 -----------------------
 
-solved by braveTester, upsolved by none
+solved by braveTester, upsolved by skywalkert
+
+------------------------------------------------------------------------
+
+skywalkert's solution
+
+注意到偶数位为交替 `LR`，奇数位为上一个串，可以借此来规约问题。
+
+假设待确认串的长度至少为 2，且已知其开头是奇数位还是偶数位，则可以确认切半后的开头是奇数位还是偶数位，从而做一些检查。注意这里切半后可能导致开头多一些可以是任意字符的位置。
+
+在待确认串长度为 1 时，开头可能有 $O(\log n)$ 的未知位置。注意到上一个串都是当前串的前缀，所以可以对字符预处理位置大于等于某个值时最左的出现位置，然后检查即可。整体复杂度线性。
+
+还有一个做法是猜出当前串的子串里不是上一个串的子串的最短长度满足一定增长关系，从而预处理一定长度的串后就可以暴力匹配了。
 
 E. Joe is learning to speak
 ---------------------------
@@ -56,7 +74,7 @@ skywalkert's solution
 F. Odd and Even Zeroes
 ----------------------
 
-solved by chitanda, upsolved by none
+solved by chitanda, upsolved by skywalkert
 
 ------------------------------------------------------------------------
 
@@ -82,7 +100,7 @@ skywalkert's solution
 H. Binary Tree
 --------------
 
-solved by chitanda, upsolved by none
+solved by chitanda, upsolved by skywalkert
 
 ------------------------------------------------------------------------
 
@@ -115,7 +133,13 @@ skywalkert's solution
 J. Cleaning the Hallway
 -----------------------
 
-unsolved
+upsolved by skywalkert
+
+------------------------------------------------------------------------
+
+skywalkert's solution
+
+用格林公式，转化为外围曲线积分。拆成两个圆分别计算圆弧是否被覆盖，注意极角序的处理。为了减少讨论，可以先尽可能合并下同心的圆环。
 
 Replay and Summary
 ==================
